@@ -7,7 +7,8 @@ set -e # Exits if passed a command with pipes
 # If they do not specify one, set it to vpn267v2
 
 echo "_________________________________________________________________________________________"
-echo "$ARGV"
+echo "${ARGV[0]}"
+echo "${ARGV[1]}"
 
 if [ ENV['OVPN_FILE'] == "" ]
 then
