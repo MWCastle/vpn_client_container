@@ -7,6 +7,7 @@ set -e # Exits if passed a command with pipes
 # If they do not specify one, set it to vpn267v2
 
 echo "_________________________________________________________________________________________"
+printenv
 echo "${ENV["OVPN_FILE"]}"
 
 if [ ENV['OVPN_FILE'] == "" ]
