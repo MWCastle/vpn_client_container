@@ -6,7 +6,10 @@ set -e # Exits if passed a command with pipes
 # If it is valid move on. If it is invalid, echo a response and exit
 # If they do not specify one, set it to vpn267v2
 
-if [ "$OVPN_FILE" == "" ]
+echo "_________________________________________________________________________________________"
+echo ENV['OVPN_FILE']
+
+if [ ENV['OVPN_FILE'] == "" ]
 then
   echo "No .ovpn file specified. Trying vpn267v2"
   VPN_FILE="/var/snap/docker/common/var-lib-docker/volumes/cfg_vol/_data/vpn/ovpns/vpn267v2.ovpn"
