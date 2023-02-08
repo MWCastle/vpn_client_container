@@ -2,21 +2,16 @@
 
 # !/usr/bin/env ruby
 
+# This solely exists because it is beyond ratchet to do in a shell script. This is not an opinion. It is a fact.
 def main
+  # Method to see if any of the user's .ovpn files match what the user said they wanted to start up.
+  # Will return the in-container-full-path to the .ovpn file if a match is found. Otherwise returns 'false'.
   ovpns = Dir.glob('/external/config/vpn/ovpns/*')
   found = false
   ovpns.each do |file_path|
     found = file_path if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
   end
   puts found
-  # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
-  # puts val_reg_exp
-  # system('ls -la /external/config/vpn/ovpns')
-  # Dir.glob('/external/config/vpn/ovpns/*')
-  # ovpns = Dir.glob('/external/config/vpn/ovpns/*')
-  # ovpns.each do |file_path|
-  #   file_path.index(/\/external\/config\/vpn\/ovpns\/*#{ENV['OVPN_FILE']}.ovpn/)
-  # end
 end
 
 main
