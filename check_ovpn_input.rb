@@ -4,7 +4,12 @@
 
 def main
   # return 'penis'
-  puts Dir.glob('/external/config/vpn/ovpns/*')
+  ovpns = Dir.glob('/external/config/vpn/ovpns/*')
+  found = false
+  ovpns.each do |file_path|
+    found = true if file_path.index("/external/#{ENV['OVPN_FILE']}")
+  end
+  puts found
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
   # puts val_reg_exp
   # system('ls -la /external/config/vpn/ovpns')
