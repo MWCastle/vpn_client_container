@@ -8,7 +8,7 @@ set -e # Exits if passed a command with pipes
 
 echo "_________________________________________________________________________________________"
 
-ovpn_path=$(check_ovpn_input)
+ovpn_path=$(./check_ovpn_input)
 echo "${ovpn_path}"
 
 
