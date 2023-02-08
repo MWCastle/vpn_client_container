@@ -7,7 +7,7 @@ set -e # Exits if passed a command with pipes
 # If they do not specify one, set it to vpn267v2
 
 echo "_________________________________________________________________________________________"
-
+echo "IN ENTRY.SH"
 ovpn_path=$(ruby /external/check_ovpn_input.rb)
 #echo "${ovpn_path}"
 
