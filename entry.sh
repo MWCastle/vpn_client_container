@@ -10,6 +10,8 @@ echo "__________________________________________________________________________
 echo "IN ENTRY.SH"
 ovpn_path=$(echo $(ruby /external/check_ovpn_input.rb))
 echo "$ovpn_path"
+
+openvpn --config "$ovpn_path"
 #ovpn_path=$(ruby /external/check_ovpn_input.rb)
 #echo "$ovpn_path"
 #echo "AFTER CHECK OVPN INPUT"
