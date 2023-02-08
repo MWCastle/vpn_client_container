@@ -7,7 +7,7 @@ def main
   ovpns = Dir.glob('/external/config/vpn/ovpns/*')
   found = false
   ovpns.each do |file_path|
-    found = true if file_path.index("/external/#{ENV['OVPN_FILE']}")
+    found = true if file_path.index(%r{/external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn})
   end
   puts found
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
