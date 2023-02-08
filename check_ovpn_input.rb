@@ -3,6 +3,7 @@
 # !/usr/bin/env ruby
 
 def main
+  return 'penis'
   puts Dir.glob('/external')
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
   # puts val_reg_exp
