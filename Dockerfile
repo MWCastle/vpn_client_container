@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ruby:3.2
 
 RUN apt-get update && apt-get install openvpn -y
 
