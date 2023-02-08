@@ -3,7 +3,8 @@
 # !/usr/bin/env ruby
 
 def main
-  puts ENV['OVPN_FILE']
+  val = ENV['OVPN_FILE']
+  puts val
 end
 
 main
