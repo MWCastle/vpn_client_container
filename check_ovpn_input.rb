@@ -5,6 +5,7 @@
 def main
   # return 'penis'
   ovpns = Dir.glob('/external/config/vpn/ovpns/*')
+  puts ovpns
   found = false
   ovpns.each do |file_path|
     found = true if file_path.index(%r{/external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn})
