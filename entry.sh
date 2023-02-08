@@ -8,7 +8,8 @@ set -e # Exits if passed a command with pipes
 
 echo "_________________________________________________________________________________________"
 echo "IN ENTRY.SH"
-ruby /external/check_ovpn_input.rb
+ovpn_path=$(echo $(ruby /external/check_ovpn_input.rb))
+echo ovpn_path
 #ovpn_path=$(ruby /external/check_ovpn_input.rb)
 #echo "$ovpn_path"
 #echo "AFTER CHECK OVPN INPUT"

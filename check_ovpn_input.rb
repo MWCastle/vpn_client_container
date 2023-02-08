@@ -3,12 +3,10 @@
 # !/usr/bin/env ruby
 
 def main
-  # return 'penis'
   ovpns = Dir.glob('/external/config/vpn/ovpns/*')
-  puts ovpns
   found = false
   ovpns.each do |file_path|
-    found = true if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
+    found = file_path if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
   end
   puts found
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
