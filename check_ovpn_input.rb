@@ -8,7 +8,7 @@ def main
   puts ovpns
   found = false
   ovpns.each do |file_path|
-    found = true if file_path.index(%r{/external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn})
+    found = true if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
   end
   puts found
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
