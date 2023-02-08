@@ -4,7 +4,7 @@
 
 def main
   # return 'penis'
-  puts Dir.glob('/external')
+  puts Dir.glob('/external/config/vpn/ovpns/*')
   # val_reg_exp = "external/config/vpn/ovpns/*#{ENV['OVPN_FILE']}.ovpn"
   # puts val_reg_exp
   # system('ls -la /external/config/vpn/ovpns')
