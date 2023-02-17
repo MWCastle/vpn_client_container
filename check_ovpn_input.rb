@@ -11,10 +11,12 @@ def main
   ovpns.each do |file_path|
     found = file_path if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
   end
-  puts '###############################################################################################################'
-  puts '#                                 right here slut                                                             #'
-  puts '###############################################################################################################'
-  puts found
+  puts ''
+  system("ls -la /external/config/vpn/ovpns")
+  puts ''
+  system('ls -la /external/config/vpn/logins')
+  puts ''
+  puts "FOUND PATH: #{found}"
 end
 
 main
