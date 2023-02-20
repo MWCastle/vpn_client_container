@@ -11,7 +11,7 @@ def main
   ovpns.each do |file_path|
     found = file_path if file_path.index(/#{ENV['OVPN_FILE']}.ovpn$/)
   end
-  puts found
+  # puts found
   found
   # puts ''
   # system("cat /external/config/vpn/logins/.vpnlogin_badger")
